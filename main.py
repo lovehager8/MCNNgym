@@ -74,7 +74,7 @@ def evaluate(board):
 
 def score(node):
     if not node.visitcount:
-        return node.parent.visitcount
+        return 500
     exploit = node.sum / node.visitcount
 
     explore = math.sqrt(2 * math.log(node.parent.visitcount) / node.visitcount)
