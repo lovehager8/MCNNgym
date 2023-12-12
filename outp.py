@@ -32,7 +32,6 @@ def outform(movenext):
     if first > second:
       if firstl > secondl:
         a = 27 - (int(movenext[3]) - int(movenext[1]))
-        print(1)
       else:
         a = 34 - (int(movenext[3]) - int(movenext[1]))
     else:
