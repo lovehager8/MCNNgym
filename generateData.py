@@ -6,13 +6,8 @@ import random
 
 pgn = open('lichess_elite_2022-11.pgn')
 file = open("failenhame.txt", "a")
-w = 0
 
 def gen_input():
-  global w
-  if w == 1:
-    return False
-  w+=1
   try:
     first_game = chess.pgn.read_game(pgn)
   except error:
@@ -79,12 +74,9 @@ def gen_input():
         for c in b:
           inpstring += str(c)
 
-    print(str(move))
     outstring = outp.outform(str(next))
-    print(outstring, first_game.headers["White"], first_game.headers["Black"])
     file.writelines([inpstring + "\n", outstring + "\n", result + "\n"])
     board.push(move)
-    print("heyyy")
     continue
 
   return True
