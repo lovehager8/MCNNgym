@@ -28,9 +28,9 @@ def gen_input():
   thirdmove = random.randint(gamethird * 2, gamethird * 3 + gamelen % 3)
 
   for i, move in enumerate(first_game.mainline_moves()):
-    #if (i != firstmove) and (i != secondmove) and (i != thirdmove):
-     # board.push(move)
-      #continue
+    if (i != firstmove) and (i != secondmove) and (i != thirdmove):
+      board.push(move)
+      continue
     
     next = move
 
