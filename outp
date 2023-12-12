@@ -53,7 +53,7 @@ def outform(movenext):
       else:
         a = 61 + int(movenext[3]) - int(movenext[1])
   if a == 65:
-    return "no"
+    return "99999"
   a += first * 64
   return str(a)
 
